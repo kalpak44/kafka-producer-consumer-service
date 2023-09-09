@@ -11,7 +11,6 @@ Kafka topic and processes them.
 - Java 17
 - Docker and Docker Compose
 - Maven (Optional)
-- Docker && Docker compose
 
 ## Key Components
 
