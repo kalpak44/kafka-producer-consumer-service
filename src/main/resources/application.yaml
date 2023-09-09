@@ -1,0 +1,22 @@
+# Server configurations
+server:
+  port: 8081
+
+# Spring Kafka configurations
+spring:
+  kafka:
+    bootstrap-servers: localhost:29092
+
+# Logging configurations
+logging:
+  level:
+    root: INFO
+
+# SpringDoc configurations for Swagger UI and API docs
+springdoc:
+  api-docs:
+    path: '/v3/api-docs'
+  swagger-ui:
+    path: '/swagger-ui'
+    operationsSorter: alpha
+    tagsSorter: alpha
