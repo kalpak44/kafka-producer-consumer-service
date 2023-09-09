@@ -9,13 +9,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-
 /**
  * GlobalControllerAdvice is a central point for handling exceptions across all controllers.
- * <p>
- * This class is annotated with @ControllerAdvice to make it a global exception handler.
- * The methods in this class are annotated with @ExceptionHandler to handle specific types of exceptions.
- * </p>
+ *
+ * <p>This class is annotated with @ControllerAdvice to make it a global exception handler. The
+ * methods in this class are annotated with @ExceptionHandler to handle specific types of
+ * exceptions.
  */
 @ControllerAdvice
 public class GlobalControllerAdvice {
@@ -23,10 +22,9 @@ public class GlobalControllerAdvice {
 
   /**
    * Handles all types of Exception.
-   * <p>
-   * This method catches any Exception thrown by controllers, logs the exception, and returns a ResponseEntity
-   * containing an ErrorResponse object and the appropriate HTTP status.
-   * </p>
+   *
+   * <p>This method catches any Exception thrown by controllers, logs the exception, and returns a
+   * ResponseEntity containing an ErrorResponse object and the appropriate HTTP status.
    *
    * @param e The caught Exception.
    * @return A ResponseEntity with the ErrorResponse and appropriate HTTP status.
@@ -44,9 +42,8 @@ public class GlobalControllerAdvice {
 
   /**
    * ErrorResponse is a record that holds the timestamp and message of an error.
-   * <p>
-   * This record is used in the ResponseEntity returned by the exception handler.
-   * </p>
+   *
+   * <p>This record is used in the ResponseEntity returned by the exception handler.
    */
   public record ErrorResponse(LocalDateTime timestamp, String message) {}
 }

@@ -46,7 +46,7 @@ public class CustomKafkaListenerComponent {
     final Headers headers = consumerRecord.headers();
 
     // Log the received message
-    LOGGER.info("Received Message: " + message);
+    LOGGER.info("Received Message: {}", message);
 
     // Acknowledge the message
     acknowledgment.acknowledge();
